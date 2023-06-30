@@ -12,24 +12,28 @@ header nav ul {
   padding: 0;
   gap: 3rem;
 }
+header .menu {
+  display: none;
+}
 
 section {
   display: flex;
   justify-content: center;
 }
 section.banner {
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
   gap: 1rem;
-  border: 1px solid blue;
+  justify-content: center;
 }
 section.banner .banner-img {
-  padding-bottom: 10px;
-}
-section.banner .banner-img img {
-  height: 90%;
-  width: 90%;
+  margin-bottom: 100px;
+  background-image: url("/assets/wireframe.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+  width: 500px;
 }
 
 .banner-content {
@@ -37,25 +41,25 @@ section.banner .banner-img img {
   width: 500px;
 }
 .banner-content h2 {
-  padding-bottom: 3rem;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 5.5rem;
-  line-height: 7rem;
   letter-spacing: 1rem;
+  line-height: 7rem;
   max-width: 45rem;
+  padding-bottom: 3rem;
   position: relative;
   /* Mixin Candidate */
 }
 .banner-content h2::before {
-  content: "";
-  position: absolute;
   background-color: #03faee;
-  width: 50%;
-  max-width: 21.5rem;
+  content: "";
   height: 50px;
-  z-index: -1;
-  top: 0;
   left: -1px;
+  max-width: 21.5rem;
+  position: absolute;
+  top: 0;
+  width: 50%;
+  z-index: -1;
 }
 .banner-content p {
   color: #8b8b8b;
@@ -64,49 +68,49 @@ section.banner .banner-img img {
   max-width: 500px;
 }
 .banner-content button {
-  border: 1px dashed black;
-  border-radius: 5px;
   background-color: #03faee;
-  padding: 2rem 3rem;
-  margin-top: 2rem;
+  border-radius: 5px;
+  border: 1px dashed black;
   margin-right: 1.5rem;
+  margin-top: 2rem;
+  padding: 2rem 3rem;
 }
 
 .features {
   display: flex;
   gap: 5rem;
-  padding-bottom: 3rem;
   justify-content: center;
+  padding-bottom: 3rem;
 }
 .features article {
-  font-size: 1.6rem;
   background-color: #f8f8f8;
+  font-size: 1.6rem;
+  max-width: 500px;
   padding: 1rem 2rem 10rem;
   width: 27%;
-  max-width: 500px;
   z-index: -2;
 }
 .features article span {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
+  background-color: #f8f8f8;
   border-radius: 50%;
   border: 1px solid black;
-  background-color: #f8f8f8;
-  text-align: center;
+  display: inline-block;
+  height: 40px;
   line-height: 40px;
   position: relative;
+  text-align: center;
+  width: 40px;
 }
 .features article span::before {
   background-color: #03faee;
+  border-radius: 50%;
   border: solid 2px #03faee;
   content: "";
-  position: absolute;
-  left: -0.75rem;
-  top: -2.5px;
   height: 100%;
+  left: -0.75rem;
+  position: absolute;
+  top: -2.5px;
   width: 100%;
-  border-radius: 50%;
   z-index: -1;
 }
 .features article h3 {
@@ -115,13 +119,13 @@ section.banner .banner-img img {
   z-index: 1;
 }
 .features article h3::before {
-  content: "";
-  position: absolute;
   background-color: #03faee;
-  width: 50%;
-  max-width: 3rem;
+  content: "";
   height: 1rem;
+  max-width: 3rem;
+  position: absolute;
   top: 0;
+  width: 50%;
   z-index: -1;
 }
 
@@ -160,6 +164,69 @@ footer i.footer-icon::before {
   top: 11.5px;
 }
 
+@media (max-width: 992px) {
+  header {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  header ul {
+    margin-top: 2rem;
+  }
+  .banner {
+    flex-direction: column-reverse;
+    width: 90vw;
+    margin-inline: auto;
+    padding-bottom: 7rem;
+  }
+  .banner .banner-content {
+    text-align: center;
+  }
+  .banner .banner-content button {
+    margin-right: 4rem;
+  }
+  .banner .banner-img {
+    width: 90vw;
+  }
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+  .features article {
+    width: 80vw;
+    padding: 5rem 10% 7rem;
+  }
+}
+@media (max-width: 767px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+  }
+  header nav {
+    display: none;
+  }
+  header .menu {
+    display: inline-block;
+    font-size: 3rem;
+  }
+  section.banner .banner-content {
+    width: 80%;
+  }
+  section.banner .banner-img {
+    width: 80%;
+    background-size: contain;
+    margin: 0;
+  }
+  footer {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  footer div {
+    margin-bottom: 2rem;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;

@@ -1,0 +1,111 @@
+// Define your media query breakpoints as variables
+$small-screen: 768px;
+$medium-screen: 992px;
+$large-screen: 1200px;
+
+
+// Media queries using Sass mixins
+@mixin small-screen {
+  @media (max-width: calc($small-screen - 1px)) {
+    @content;
+  }
+}
+
+@mixin medium-screen {
+  @media (max-width: $medium-screen) {
+    @content;
+  }
+}
+
+@mixin large-screen {
+  @media (min-width: calc($medium-screen - 1px)) and (max-width: $large-screen) {
+    @content;
+  }
+}
+
+// Usage of media query mixins
+
+@include medium-screen {
+
+    header{
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+
+        ul{
+            margin-top: 2rem;
+        }
+    }
+    
+    .banner{
+        flex-direction: column-reverse;
+        width: 90vw;
+        margin-inline: auto;
+        padding-bottom: 7rem;
+        .banner-content{
+            text-align: center;
+
+            button{
+                margin-right: 4rem;
+            }
+        }
+        .banner-img{
+            width: 90vw;
+        }
+    }
+
+    .features{
+        flex-direction: column;
+        align-items: center;
+        
+        article{
+            width: 80vw;
+            padding: 5rem 10% 7rem;
+        }
+    }
+
+}
+
+
+@include small-screen {
+
+    header{
+
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 4rem;
+
+        nav{
+            display: none;
+        }
+
+        .menu{
+            display: inline-block;
+            font-size: 3rem;
+
+        }
+
+    }
+
+    section.banner{
+        .banner-content{
+            width: 80%;
+        }
+        .banner-img{
+            width: 80%;
+            background-size: contain;
+            margin:0;
+        }
+    }
+
+    footer{
+        flex-direction: column-reverse;
+        text-align: center;
+
+        div{
+            margin-bottom: 2rem;
+        }        
+    }
+}
+

@@ -5,19 +5,19 @@ section{
     justify-content: center;
     
     &.banner{
-        display: flex;
-        justify-content: center;
         align-items: center;
+        display: flex;
         gap: 1rem;
+        justify-content: center;
         
-        border: 1px solid blue;
         .banner-img{
-            padding-bottom: 10px;
-            
-            img{
-                height: 90%;
-                width: 90%;
-            }
+            margin-bottom: 100px;
+            background-image: url("/assets/wireframe.svg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 500px;
+            width: 500px;
         }
     }
     
@@ -29,25 +29,25 @@ section{
     text-align: left;
     width: 500px;
     h2{
-        padding-bottom: 3rem;
         font-family:  Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         font-size: 5.5rem;
-        line-height: 7rem;
         letter-spacing: 1rem;
+        line-height: 7rem;
         max-width: calc(5rem * 9);
+        padding-bottom: 3rem;
         position:relative;
 
         /* Mixin Candidate */
         &::before{
-            content: "";
-            position: absolute;
             background-color: $bg-primary;
-            width: 50%;
-            max-width: calc(5rem*4.3);
+            content: "";
             height: 50px;
-            z-index: -1;
-            top: 0;
             left: -1px;
+            max-width: calc(5rem*4.3);
+            position: absolute;
+            top: 0;
+            width: 50%;
+            z-index: -1;
         }
     }
 
@@ -59,12 +59,12 @@ section{
     }
 
     button{
-        border: 1px dashed black;
-        border-radius: 5px;
         background-color:$bg-primary;
-        padding: 2rem 3rem;
-        margin-top: 2rem;
+        border-radius: 5px;
+        border: 1px dashed black;
         margin-right: 1.5rem;
+        margin-top: 2rem;
+        padding: 2rem 3rem;
     }
 
     
@@ -75,38 +75,38 @@ section{
 
     display: flex;
     gap: 5rem;
-    padding-bottom: 3rem;
     justify-content: center;
+    padding-bottom: 3rem;
 
     article{
-        font-size: 1.6rem;
         background-color: $bg-secondary;
+        font-size: 1.6rem;
+        max-width: 500px;
         padding: 1rem 2rem 10rem;
         width: 27%;
-        max-width: 500px;
         z-index: -2;
-        
+
         span{
-            display: inline-block;
-            width: 40px;
-            height: 40px;
+            background-color: $bg-secondary;
             border-radius: 50%;
             border: 1px solid black;
-            background-color: $bg-secondary;
-            text-align: center;
+            display: inline-block;
+            height: 40px;
             line-height: 40px;
             position: relative;
+            text-align: center;
+            width: 40px;
 
             &::before{
                 background-color: $bg-primary;
+                border-radius: 50%;
                 border: solid 2px $bg-primary;
                 content: "";
-                position: absolute;
-                left: -0.75rem;
-                top: -2.5px;
                 height: 100%;
+                left: -0.75rem;
+                position: absolute;
+                top: -2.5px;
                 width: 100%;
-                border-radius: 50%;
                 z-index: -1;
             }
         }
@@ -117,13 +117,13 @@ section{
             z-index: 1;
 
             &::before{
-                content: "";
-                position: absolute;
                 background-color: $bg-primary;
-                width: 50%;
-                max-width: calc(3rem);
+                content: "";
                 height: 1rem;
+                max-width: calc(3rem);
+                position: absolute;
                 top: 0;
+                width: 50%;
                 z-index: -1;
             }
         }
