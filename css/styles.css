@@ -1,0 +1,171 @@
+header {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2.5rem 7rem;
+}
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  gap: 3rem;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+section.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid blue;
+}
+section.banner .banner-img {
+  padding-bottom: 10px;
+}
+section.banner .banner-img img {
+  height: 90%;
+  width: 90%;
+}
+
+.banner-content {
+  text-align: left;
+  width: 500px;
+}
+.banner-content h2 {
+  padding-bottom: 3rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 5.5rem;
+  line-height: 7rem;
+  letter-spacing: 1rem;
+  max-width: 45rem;
+  position: relative;
+  /* Mixin Candidate */
+}
+.banner-content h2::before {
+  content: "";
+  position: absolute;
+  background-color: #03faee;
+  width: 50%;
+  max-width: 21.5rem;
+  height: 50px;
+  z-index: -1;
+  top: 0;
+  left: -1px;
+}
+.banner-content p {
+  color: #8b8b8b;
+  font-size: 1.6rem;
+  line-height: 3rem;
+  max-width: 500px;
+}
+.banner-content button {
+  border: 1px dashed black;
+  border-radius: 5px;
+  background-color: #03faee;
+  padding: 2rem 3rem;
+  margin-top: 2rem;
+  margin-right: 1.5rem;
+}
+
+.features {
+  display: flex;
+  gap: 5rem;
+  padding-bottom: 3rem;
+  justify-content: center;
+}
+.features article {
+  font-size: 1.6rem;
+  background-color: #f8f8f8;
+  padding: 1rem 2rem 10rem;
+  width: 27%;
+  max-width: 500px;
+  z-index: -2;
+}
+.features article span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: #f8f8f8;
+  text-align: center;
+  line-height: 40px;
+  position: relative;
+}
+.features article span::before {
+  background-color: #03faee;
+  border: solid 2px #03faee;
+  content: "";
+  position: absolute;
+  left: -0.75rem;
+  top: -2.5px;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  z-index: -1;
+}
+.features article h3 {
+  margin: 2rem 0 1rem;
+  position: relative;
+  z-index: 1;
+}
+.features article h3::before {
+  content: "";
+  position: absolute;
+  background-color: #03faee;
+  width: 50%;
+  max-width: 3rem;
+  height: 1rem;
+  top: 0;
+  z-index: -1;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 5rem 7rem 2rem;
+  font-size: 2rem;
+}
+footer i {
+  font-size: 2.5rem;
+  margin-right: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: white;
+  text-align: center;
+  position: relative;
+}
+footer i.footer-icon::after {
+  background-color: #03faee;
+  border: solid 2px #03faee;
+  content: "";
+  position: absolute;
+  left: -0.75rem;
+  top: -2.5px;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  z-index: -2;
+}
+footer i.footer-icon::before {
+  position: relative;
+  top: 11.5px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html, body {
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,39 @@
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 5rem 7rem 2rem;
+    font-size: 2rem;
+    i{
+        font-size: 2.5rem;
+        margin-right: 2rem;
+        
+
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: none;
+        background-color: white;
+        text-align: center;
+        position: relative;
+
+        &.footer-icon::after{
+            background-color: $bg-primary;
+            border: solid 2px $bg-primary;
+            content: "";
+            position: absolute;
+            left: -0.75rem;
+            top: -2.5px;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            z-index: -2;
+        }
+
+        &.footer-icon::before{
+            position: relative;
+            top: 11.5px;
+        }
+    }
+}
