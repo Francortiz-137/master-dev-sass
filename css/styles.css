@@ -28,7 +28,7 @@ section.banner {
 }
 section.banner .banner-img {
   margin-bottom: 100px;
-  background-image: url("/assets/wireframe.svg");
+  background-image: url("assets/wireframe.svg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
